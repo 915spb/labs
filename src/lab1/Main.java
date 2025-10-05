@@ -1,6 +1,8 @@
 package lab1;
 import java.util.Locale;
 import java.util.Scanner;
+import java.math.BigDecimal;
+
 
 //mac
 
@@ -12,16 +14,35 @@ public class Main {
 
         double num = 19;
 
-
+        //xStart
         System.out.print("Введите начало диапазона (X_start): ");
+        while (!scan.hasNextDouble()) {
+            System.out.println("Ошибка: введите только число, используя точку.");
+            scan.next();
+            System.out.print("Повторите ввод X_start: ");
+
+        }
         double xStart = scan.nextDouble();
 
+        //xEnd
         System.out.print("Введите конец диапазона (X_end): ");
+        while (!scan.hasNextDouble()) {
+            System.out.println("Ошибка: введите только число, используя точку.");
+            scan.next();
+            System.out.print("Повторите ввод X_end: ");
+
+        }
         double xEnd = scan.nextDouble();
 
+        //deltaX
         System.out.print("Введите шаг deltaX (!= 0): ");
+        while (!scan.hasNextDouble()) {
+            System.out.println("Ошибка: введите только число, используя точку.");
+            scan.next();
+            System.out.print("Повторите ввод deltaX: ");
+        }
         double deltaX = scan.nextDouble();
-        while(deltaX== 0.0){
+        while(deltaX == 0.0){
             System.out.print("Шаг не должен быть 0. Повторите: ");
             deltaX = scan.nextDouble();
         }
@@ -94,6 +115,7 @@ public class Main {
                 if (cell.length() > 40) {
                     cell = cell.substring(0, 50) + "...";
                 }
+
                 System.out.printf("| %-4d | %-16.6f | %-50s |\n", row++, x, cell);
 
 
