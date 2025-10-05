@@ -1,7 +1,8 @@
 package lab1;
 import java.util.Locale;
 import java.util.Scanner;
-import java.math.BigDecimal;
+import java.math.*;
+
 
 
 //mac
@@ -115,8 +116,8 @@ public class Main {
                 if (cell.length() > 40) {
                     cell = cell.substring(0, 50) + "...";
                 }
-
-                System.out.printf("| %-4d | %-16.6f | %-50s |\n", row++, x, cell);
+                String formattedX = new BigDecimal(x).setScale(6, RoundingMode.HALF_UP).stripTrailingZeros().toPlainString();
+                System.out.printf("| %-4d | %-16s | %-50s |\n", row++, formattedX, cell);
 
 
             }
