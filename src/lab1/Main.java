@@ -54,31 +54,31 @@ public class Main {
                 double base = Math.abs(num / 10.0) + 4.0;
 
                 if (base <= 0.0) {
-                    //cell = "Ошибка: основание логарифма <= 0";
-                    cell = "Ошибка";
+                    cell = "Ошибка: основание логарифма <= 0";
+                    //cell = "Ошибка";
                 } else if (base == 1.0){
-                    //cell = "Ошибка: основание логарифма == 1";
-                    cell = "Ошибка";
+                    cell = "Ошибка: основание логарифма == 1";
+                    //cell = "Ошибка";
                 } else {
                     double cos = Math.cos(x - num);
                     if (cos == 0.0) {
-                        //cell = "Ошибка: cos(x - num) = 0";
-                        cell = "Ошибка";
+                        cell = "Ошибка: cos(x - num) = 0";
+                        //cell = "Ошибка";
                     } else {
                         double arg = (1.0 - num) / cos;
                         if(arg <= 0.0) {
-                            //cell = "Ошибка: логарифм от неположительного";
-                            cell = "Ошибка";
+                            cell = "Ошибка: логарифм от неположительного";
+                            //cell = "Ошибка";
                         } else {
                             double f1 = Math.log(arg) / Math.log(base);
 
                             // f2 = sin(log(x)) / num
                             if (x <= 0.0) {
-                                //cell = "Ошибка: ln(x) при x ≤ 0";
-                                cell = "Ошибка";
+                                cell = "Ошибка: ln(x) при x ≤ 0";
+                                //cell = "Ошибка";
                             } else if (num == 0.0) {
-                                //cell = "Ошибка: деление на 0 (num = 0)";
-                                cell = "Ошибка";
+                                cell = "Ошибка: деление на 0 (num = 0)";
+                                //cell = "Ошибка";
                             } else {
                                 double f2 = Math.sin(Math.log(x)) / num;
 
@@ -104,30 +104,30 @@ public class Main {
 
                 double base = Math.abs(num / 10.0) + 4.0;
                 if (base <= 0.0) {
-                    //cell = "Ошибка: основание логарифма ≤ 0";
-                    cell = "Ошибка";
+                    cell = "Ошибка: основание логарифма ≤ 0";
+                    //cell = "Ошибка";
                 } else if (base == 1.0) {
-                    //cell = "Ошибка: основание логарифма = 1";
-                    cell = "Ошибка";
+                    cell = "Ошибка: основание логарифма = 1";
+                    //cell = "Ошибка";
                 } else {
                     double cos = Math.cos(x - num);
                     if (cos == 0.0) {
-                        //cell = "Ошибка: cos(x - num) = 0";
-                        cell = "Ошибка";
+                        cell = "Ошибка: cos(x - num) = 0";
+                        //cell = "Ошибка";
                     } else {
                         double arg = (1.0 - num) / cos;
                         if (arg <= 0.0) {
-                            //cell = "Ошибка: логарифм от неположительного";
-                            cell = "Ошибка";
+                            cell = "Ошибка: логарифм от неположительного";
+                            //cell = "Ошибка";
                         } else {
                             double f1 = Math.log(arg) / Math.log(base);
 
                             if (x <= 0.0) {
-                                //cell = "Ошибка: ln(x) при x ≤ 0";
-                                cell = "Ошибка";
+                                cell = "Ошибка: ln(x) при x ≤ 0";
+                                //cell = "Ошибка";
                             } else if (num == 0.0) {
-                                //cell = "Ошибка: деление на 0 (num = 0)";
-                                cell = "Ошибка";
+                                cell = "Ошибка: деление на 0 (num = 0)";
+                                //cell = "Ошибка";
                             } else {
                                 double f2 = Math.sin(Math.log(x)) / num;
                                 double fx = Math.min(f1, f2);
